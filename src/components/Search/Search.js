@@ -51,7 +51,7 @@ class Search extends Component {
                     {this.state.loading ? <Spinner /> : null}
                     <form>
                         <label> Search </label>
-                        <input type="text"
+                        <input type="text" placeholder="Enter your github username..."
                             onChange={this.handleChange("username")}
                         />
                         <Link to={`search/${this.state.username}`}>
