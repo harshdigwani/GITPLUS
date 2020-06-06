@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 import "./Search.css";
 import Spinner from '../Core/Spinner';
 import { searchUser } from '../../services/Users';
@@ -16,6 +16,7 @@ class Search extends Component {
             user: "",
             redirect: false
         };
+        console.log("SEARCH COMPONENT IS CALLED");
     }
 
 

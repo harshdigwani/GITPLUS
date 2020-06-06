@@ -7,7 +7,7 @@ const Home = () => {
         <Base>
             <div>
                 <div className="home-container">
-                    <img className="img-1" src='../../../../images/versionControl.svg' />
+                    <img className="img-1" src='../../../../images/versionControl.svg' alt="git" />
                     <div className="top-section">
                         <h1>Get More Insights with Gitplus</h1>
                         <ul>
@@ -22,13 +22,13 @@ const Home = () => {
                 <div className="home-container">
                     <h2>TechStack Used</h2>
                     <div className="tech-stack">
-                        <div className="tech"> <img className="img-2" src='../../../../images/react.svg' />
+                        <div className="tech"> <img className="img-2" src='../../../../images/react.svg' alt="react.js" />
                             <h5>React.js</h5>
                         </div>
-                        <div className="tech"> <img className="img-2" src='../../../../images/css.svg' />
+                        <div className="tech"> <img className="img-2" src='../../../../images/css.svg' alt="css" />
                             <h5>HTML and CSS</h5>
                         </div>
-                        <div className="tech"> <img className="img-2" src='../../../../images/api.svg' />
+                        <div className="tech"> <img className="img-2" src='../../../../images/api.svg' alt="api" />
                             <h5>Github APIs</h5>
                         </div>
                     </div>

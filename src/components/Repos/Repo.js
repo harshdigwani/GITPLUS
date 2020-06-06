@@ -1,6 +1,5 @@
 import React from 'react'
 import './Repo.css';
-import { Link } from 'react-router-dom'
 
 const Repo = (props) => {
     const repo = props.repo;
