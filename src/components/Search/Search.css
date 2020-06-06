@@ -1,0 +1,42 @@
+.container,
+form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    min-height: 90vh;
+}
+
+form {
+    width: 100%;
+}
+
+label {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+input {
+    width: 70%;
+    padding: .75rem 1.25rem;
+    font-size: 1.5rem;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.btn {
+    background-color: #fff;
+    border-radius: 5px;
+    height: 2rem;
+    width: 5rem;
+    border: 1px solid rgb(109, 109, 109);
+}
+
+.btn :hover {
+    background-color: rgb(117, 117, 117);
+    transform: scale(1.1, 1.1);
+}

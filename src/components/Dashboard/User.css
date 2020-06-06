@@ -1,0 +1,69 @@
+.user-container {
+    background-color: #1a1e22;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.user-section {
+    display: flex;
+    width: 25%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem .5rem 2rem .5rem;
+}
+
+.dp {
+    border: 5px solid blue;
+    border-radius: 50%;
+    max-width: 60%;
+    max-height: auto;
+    margin: 1rem;
+}
+
+.counts {
+    display: flex;
+}
+
+.badge {
+    height: 5rem;
+    width: 8rem;
+    margin: .5rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2rem;
+    background-color: #24292e;
+}
+
+.badge p {
+    margin: 0;
+    font-size: .75rem;
+}
+
+@media only screen and (max-width: 1200px) {
+    .user-section{
+        width: 35%;
+    }
+}
+
+@media only screen and (max-width:810px) {
+    .user-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .counts{
+        flex-direction: column;
+    }
+
+    .user-section {
+        width: 55%;
+    }
+}

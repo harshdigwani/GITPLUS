@@ -1,0 +1,41 @@
+.repo-details {
+    box-sizing: border-box;
+    background-color: #fff;
+    margin: .5rem;
+    padding: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px -15px;
+    color: black;
+    width: 31%;
+    overflow: hidden;
+}
+
+.stats{
+    padding: 0 1rem;
+    margin-top: auto;
+    line-height: 2rem;
+    bottom: 0;
+}
+
+.font-star{
+    color: rgb(255, 230, 0);
+}
+
+.font-lang{
+    color: blue;
+}
+
+.font-fork{
+    color: grey;
+}
+
+@media only screen and (max-width:1200px) {
+    .repo-details {
+        width: 45%;
+    }
+}
+
+@media only screen and (max-width:810px) {
+    .repo-details {
+        width: 100%;
+    }
+}
