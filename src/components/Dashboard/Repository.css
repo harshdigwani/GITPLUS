@@ -9,8 +9,12 @@
     overflow: hidden;
 }
 
+.repo-details a{
+    margin-left: 1rem;
+}
+
 .stats{
-    padding: 0 1rem;
+    padding: 0 1rem 1rem;
     margin-top: auto;
     line-height: 2rem;
     bottom: 0;
