@@ -1,6 +1,5 @@
 .navbar {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
     min-height: 10vh;
     background-color: #90b7f1;
@@ -8,16 +7,16 @@
     padding: 0 5% 0 5%;
 }
 
-.logo{
+.logo {
     height: 3rem;
     width: 3rem;
     border: 3px solid black;
 }
 
-.brand{
+.brand {
     display: flex;
     align-items: center;
-    flex: 1;
+    width: 50%;
     font-size: 1.5rem;
     padding: .5rem;
     font-weight: 600;
@@ -25,14 +24,23 @@
     color: white;
 }
 
+.nav-menu {
+    background-color: inherit;
+    border: 0px;
+    color: white;
+    margin-left: auto;
+    display: none;
+}
+
 .nav-link {
     text-decoration: none;
+    display: block;
     color: #fff;
     font-size: 1.3rem;
     padding: 1rem;
 }
 
-.active-nav-link{
+.active-nav-link {
     color: rgb(53, 10, 133);
 }
 
@@ -45,14 +53,26 @@
     .navbar {
         justify-content: space-around;
         flex-direction: column;
-        min-height: 40vh;
+        /* min-height: 40vh; */
     }
 
-    .nav-link {
-        margin-top: 5rem;
+    .nav-menu {
+        display: inline-block;
     }
 
-    .logo, .brand{
-        display: none;
+    .nav-link{
+        /* display: none; */
+    }
+
+    .hidden {
+        display: none
+    }
+    
+
+    .brand {
+        /* flex: 0; */
+        /* display: none; */
+        width: 100%;
+        justify-content: space-around;
     }
 }

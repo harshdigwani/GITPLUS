@@ -22,13 +22,13 @@ const Home = () => {
                 <div className="home-container">
                     <h2>TechStack Used</h2>
                     <div className="tech-stack">
-                        <div className="tech"> <img className="img-2" src='../../../../images/react.svg' alt="react.js" />
+                        <div className="tech"> <img src='../../../../images/react.svg' alt="react.js" />
                             <h5>React.js</h5>
                         </div>
-                        <div className="tech"> <img className="img-2" src='../../../../images/css.svg' alt="css" />
+                        <div className="tech"> <img src='../../../../images/css.svg' alt="css" />
                             <h5>HTML and CSS</h5>
                         </div>
-                        <div className="tech"> <img className="img-2" src='../../../../images/api.svg' alt="api" />
+                        <div className="tech"> <img src='../../../../images/api.svg' alt="api" />
                             <h5>Github APIs</h5>
                         </div>
                     </div>

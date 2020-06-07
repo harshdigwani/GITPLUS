@@ -8,7 +8,7 @@ const User = (props) => {
         <div className="user-container">
             <div className="user-section">
                 <img className="dp" src={user.avatar_url} alt="User" />
-                <h2>@{user.login}</h2>
+                <a target="_blank" href={user.html_url}><h2>@{user.login}</h2></a>
                 {"Joined " + date.toDateString()}<br />
                 {user.name}<br />
                 {user.bio}<br />
