@@ -46,7 +46,7 @@ class Dashboard extends Component {
             <Base>
                 <div>
                     {this.state.loading && <Spinner />}
-                    {user && <User user={user} />}
+                    {user && <a target="_blank" href={user.html_url}><User user={user} /></a>}
                     <div className="bg-second">
                         {repos && (<div>
                             <h3 className="sub-heading-2">Top Repositories...</h3>

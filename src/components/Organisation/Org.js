@@ -6,9 +6,10 @@ const Org = (props) => {
     console.log(org);
     return (
         <div className="card">
-            <h3>{org.login}</h3>
-            <img src={org.avatar_url} alt={org.avatar_url} />
-            <hr />
+            <a target="_blank" href={org.html_url}>
+                <h3>{org.login}</h3>
+                <img src={org.avatar_url} alt={org.avatar_url} />
+            </a>
         </div>
     )
 }
