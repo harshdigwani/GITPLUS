@@ -3,6 +3,7 @@ import { getProfiles } from '../../services/Profiles';
 import Spinner from '../Core/Spinner';
 import Profile from './Profile';
 import Base from '../Base/Base';
+import Pagination from '../Pagination/Pagination';
 
 class Profiles extends Component {
 
@@ -12,6 +13,10 @@ class Profiles extends Component {
             loading: true,
             error: false,
             profiles: [],
+            currPage: 1,
+            itemsPerPage: 15,
+            totalItems: 0
+
         };
     }
 
@@ -30,8 +35,12 @@ class Profiles extends Component {
         }
     }
 
+    paginate = (num) => this.setState({ currPage: num });
+
     render() {
-        const profiles = this.state.profiles.slice(0, 15);
+        const indexOfLastItem = this.state.currPage * this.state.itemsPerPage;
+        const indexOfFirstItem = indexOfLastItem - this.state.itemsPerPage;
+        const profiles = this.state.profiles.slice(indexOfFirstItem, indexOfLastItem);
 
         return (
             <Base>
@@ -46,6 +55,11 @@ class Profiles extends Component {
                     }
 
                 </div>
+                <Pagination itemsPerPage={this.state.itemsPerPage}
+                    totalItems={this.state.totalItems}
+                    paginate={this.paginate}
+                    currPage={this.state.currPage} />
+
             </Base>
         )
     }

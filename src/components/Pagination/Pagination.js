@@ -26,7 +26,9 @@ const Pagination = ({ itemsPerPage, totalItems, paginate, currPage }) => {
                     </li>
                 )
                 )}
-                <li onClick={() => paginate(currPage + 1)} >Next<p className="fa fa-arrow-right" /></li>
+
+                {(currPage < 7) &&
+                    <li onClick={() => paginate(currPage + 1)} >Next<p className="fa fa-arrow-right" /></li>}
             </ul>
         </div >
     )

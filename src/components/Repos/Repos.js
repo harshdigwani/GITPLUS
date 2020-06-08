@@ -22,7 +22,6 @@ class Repos extends Component {
 
     getRepositories = async () => {
         try {
-            console.log("het")
             this.setState({ loading: true });
             const repos = await getRepos();
             this.setState({
@@ -41,11 +40,7 @@ class Repos extends Component {
         this.getRepositories();
     }
 
-    paginate = (num) => {
-        this.setState({ currPage: num })
-        console.log("paginate", this.state)
-        if (this.state.currPage >= this.state.currPage * this.state.itemsPerPage) this.getRepositories();
-    };
+    paginate = (num) => this.setState({ currPage: num });
 
     render() {
         const indexOfLastItem = this.state.currPage * this.state.itemsPerPage;

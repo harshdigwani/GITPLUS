@@ -4,6 +4,7 @@ import Spinner from '../Core/Spinner';
 import './Organisation.css';
 import Base from '../Base/Base';
 import Org from './Org';
+import Pagination from '../Pagination/Pagination';
 
 class Organisation extends Component {
 
@@ -13,6 +14,9 @@ class Organisation extends Component {
             loading: true,
             error: false,
             orgs: [],
+            currPage: 1,
+            itemsPerPage: 15,
+            totalItems: 0
         };
     }
 
@@ -29,8 +33,13 @@ class Organisation extends Component {
         }
     }
 
+    paginate = (num) => this.setState({ currPage: num });
+
+
     render() {
-        const orgs = this.state.orgs.slice(0, 15);
+        const indexOfLastItem = this.state.currPage * this.state.itemsPerPage;
+        const indexOfFirstItem = indexOfLastItem - this.state.itemsPerPage;
+        const orgs = this.state.orgs.slice(indexOfFirstItem, indexOfLastItem);
 
         return (
             <Base>
@@ -39,12 +48,16 @@ class Organisation extends Component {
                     {this.state.loading && <Spinner />}
                     {
                         orgs && (<div className="container">
-                            {Object.values(orgs.slice(0, 15))
+                            {Object.values(orgs)
                                 .map((org) => <Org key={org.id} org={org} />)}
                         </div>)
                     }
 
                 </div>
+                <Pagination itemsPerPage={this.state.itemsPerPage}
+                    totalItems={this.state.totalItems}
+                    paginate={this.paginate}
+                    currPage={this.state.currPage} />
             </Base>
         )
     }
