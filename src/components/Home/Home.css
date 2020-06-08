@@ -54,8 +54,12 @@ li {
     border-radius: 1rem;
     max-width: 28%;
     max-height: auto;
-    margin: 2%;
+    margin: 3%;
     background-color: #f4f8fe;
+}
+
+.tech img{
+    width: 100%;
 }
 
 .tech h5 {
@@ -84,9 +88,8 @@ li {
     }
 
     .tech {
-
         max-width: 80%;
-        height: 40%;
+        /* height: 40%; */
         margin: 20% 10% 20% 10%;
     }
 
