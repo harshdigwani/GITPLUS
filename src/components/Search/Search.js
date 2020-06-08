@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import "./Search.css";
 import Spinner from '../Core/Spinner';
 import { searchUser } from '../../services/Users';

@@ -17,9 +17,12 @@
 li {
     display: block;
     padding-left: .5rem;
-    font-size: 1.5rem;
     margin: .5rem;
     font-weight: 500;
+}
+
+.top-section li {
+    font-size: 1.5rem;
 }
 
 .font-green {
@@ -49,13 +52,13 @@ li {
     flex-direction: column;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 30px -15px;
     border-radius: 1rem;
-    max-width: 30%;
+    max-width: 28%;
     max-height: auto;
     margin: 2%;
     background-color: #f4f8fe;
 }
 
-.tech h5{
+.tech h5 {
     padding: 0;
     margin: 0;
 }
@@ -74,15 +77,15 @@ li {
         align-items: center;
     }
 
-    .tech-stack{
+    .tech-stack {
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-    .tech{
+    .tech {
 
-        max-width: 90%;
+        max-width: 80%;
         height: 40%;
         margin: 20% 10% 20% 10%;
     }

@@ -4,6 +4,7 @@ import Spinner from '../Core/Spinner';
 import Repo from './Repo';
 import './Repos.css';
 import Base from '../Base/Base';
+import Pagination from '../Pagination/Pagination';
 
 class Repos extends Component {
 
@@ -13,14 +14,20 @@ class Repos extends Component {
             loading: true,
             error: false,
             repos: [],
+            currPage: 1,
+            itemsPerPage: 15,
+            totalItems: 0
         };
     }
 
-    async componentDidMount() {
+    getRepositories = async () => {
         try {
+            console.log("het")
+            this.setState({ loading: true });
             const repos = await getRepos();
             this.setState({
                 repos: repos.items,
+                totalItems: repos.items.length,
                 loading: false
             })
 
@@ -30,10 +37,21 @@ class Repos extends Component {
         }
     }
 
+    async componentDidMount() {
+        this.getRepositories();
+    }
+
+    paginate = (num) => {
+        this.setState({ currPage: num })
+        console.log("paginate", this.state)
+        if (this.state.currPage >= this.state.currPage * this.state.itemsPerPage) this.getRepositories();
+    };
+
     render() {
-        const repos = this.state.repos.slice(0, 15);
-        // console.log(repos[0]);
-        // repos = []
+        const indexOfLastItem = this.state.currPage * this.state.itemsPerPage;
+        const indexOfFirstItem = indexOfLastItem - this.state.itemsPerPage;
+        const repos = this.state.repos.slice(indexOfFirstItem, indexOfLastItem);
+
         return (
             <Base>
                 <div>
@@ -47,6 +65,10 @@ class Repos extends Component {
                     }
 
                 </div>
+                <Pagination itemsPerPage={this.state.itemsPerPage}
+                    totalItems={this.state.totalItems}
+                    paginate={this.paginate}
+                    currPage={this.state.currPage} />
             </Base>
         )
     }

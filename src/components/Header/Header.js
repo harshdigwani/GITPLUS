@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import "./Header.css";
 
@@ -13,8 +13,6 @@ class Header extends Component {
 
     render() {
         let { navbar } = this.state;
-        // navbar = false;
-        console.log("i amm" + navbar);
 
         return (
             <header className="navbar" >
