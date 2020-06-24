@@ -1,22 +1,17 @@
-# Onechat
+# GITPLUS
 
-### Room chat application based chat application
+### Github api based application which show top repositories, profiles, organisation and many more.
 
-#### One chat application is build for group or personal chat and also support for multiple emojis.
+#### Gitplus application is build to get more insights from github.
 
-## Application is Deployed here :- https://1chat.netlify.app/
+## Application is Deployed here :- https://gitplus.netlify.app/
 
-### Frontend Code :- https://github.com/harshdigwani/onechatfrontend
-
-### Backend Code :- https://github.com/harshdigwani/onechatbackend
-
+### Application Code :- https://github.com/harshdigwani/GITPLUS
 
 ## Technology Used :-
 ### Reactjs
-### Nodejs
-### ExpressJS
-### Socket.io for realtime communication
-### Html, Css and Flexbox
+### HTML, CSS and Flexbox
+### Github REST APIs
 ### Netlify for deployment
 
 
